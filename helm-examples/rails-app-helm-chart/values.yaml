@@ -7,8 +7,7 @@ sidekiq:
   replicaCount: 1
   name: sidekiq-worker
 image:
-  repository: ''
-  tag: latest
+  repository: rails-dockerized:0.0.2
   pullPolicy: Always
 service:
   name: demo-web-service
@@ -83,7 +82,7 @@ ingress:
   enabled: true
   # If you have a static global IP that you want to assign to exposed service
   # then set ipPresent to true and set `ipname` to the name of ip address
-  # to get the list of reserved IPs in gcloud you can fire command: `gcloud compute addresses list` 
+  # to get the list of reserved IPs in gcloud you can fire command: `gcloud compute addresses list`
   ipPresent: true
   ipname: demo-static-ip
   ipAddress: ""
